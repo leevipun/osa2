@@ -1,0 +1,26 @@
+const Countryinfo = ({ data }) => {
+  return (
+    <div>
+      {data.map((item, index) => (
+        <div key={index}>
+          <h1>{item.name.common}</h1>
+          <ul>
+            <li>Capital: {item.capital}</li>
+            <li>Area: {item.area}</li>
+            <h3>Languages:</h3>
+            <ul>
+              {Object.entries(item.languages).map(([code, language]) => (
+                <li key={code}>
+                  {code}: {language}
+                </li>
+              ))}
+            </ul>
+          </ul>
+          <img src={item.flags.png} alt={`${item.name.common} flag`} />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Countryinfo;
