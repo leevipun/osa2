@@ -34,6 +34,10 @@ const Table = ({ data, country, setData, WeatherData }) => {
             <div>
               <h1>Weather in {WeatherData.name}</h1>
               <p>Temperature is {WeatherData.main.temp} Celsius</p>
+              <img
+                src={`https://openweathermap.org/img/wn/${WeatherData.weather[0].icon}@2x.png`}
+                alt="WeatherIcon"
+              />
               <p>Wind is {WeatherData.wind.speed}m/s</p>
             </div>
           </div>

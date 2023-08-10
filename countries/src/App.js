@@ -38,6 +38,7 @@ function App() {
           Weather.get(latitude, longitude, apiKey)
             .then((weatherData) => {
               setWeatherData(weatherData);
+              console.log(weatherData);
             })
             .catch((error) => {
               console.log("Error fetching weather data:", error);
